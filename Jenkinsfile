@@ -1,10 +1,10 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        bat(script: '"${mvnHome}\\bin\\mvn" -Dmaven.test.failure.ignore clean package', returnStatus: true)
-      }
-    }
-  }
+agent { docker 'maven:3-alpine' } ①
+stages {
+stage('Example Build') {
+steps {
+sh 'mvn -Dmaven.test.failure.ignore clean package'
+}
+}
+}
 }
