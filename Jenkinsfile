@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Example Build') {
       steps {
-        sh 'mvn -Dmaven.test.failure.ignore clean package'
+        bat 'mvn -Dmaven.test.failure.ignore clean package'
       }
     }
   }
