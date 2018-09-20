@@ -11,7 +11,7 @@ pipeline {
     }
     stage('IT') {
       when { 
-        branch 'develop' 
+        branch 'master' 
       }
       steps {
         //Aqui estamos delegando en Maven el despliegue de la palicacion en el entorno de desarrollo
