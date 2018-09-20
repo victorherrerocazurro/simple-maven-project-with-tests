@@ -22,7 +22,7 @@ pipeline {
         stage('QA') {
           steps {
             bat 'mvn clean'
-            input(message: 'Finalizaron correctamente', submitter: 'qa')
+            input(message: 'Finalizaron correctamente', submitter: 'admin')
           }
         }
         stage('Performance') {
