@@ -21,13 +21,13 @@ pipeline {
       parallel {
         stage('QA') {
           steps {
-            bat 'mvn'
+            bat 'mvn clean'
             input(message: 'Finalizaron correctamente', submitter: 'qa')
           }
         }
         stage('Performance') {
           steps {
-            bat 'mvn'
+            bat 'mvn clean'
           }
         }
       }
